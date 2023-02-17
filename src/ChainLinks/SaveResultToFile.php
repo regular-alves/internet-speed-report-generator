@@ -14,7 +14,7 @@ class SaveResultToFile extends Handler
             throw new Exception('File not specified');
         }
 
-        $file = fopen($data['file_location'], 'w+');
+        $file = fopen($data['file_location'], 'a+');
 
         if (!$file) {
             throw new Exception('Error to open file');
